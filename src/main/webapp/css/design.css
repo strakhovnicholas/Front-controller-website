@@ -1,0 +1,222 @@
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.button-container {
+    margin: 20px auto;
+    width: 300px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.button {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    height: 50px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.button:active {
+    background-color: #004085;
+}
+
+table {
+    width: 90%; /* Ширина таблицы */
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #f9f9f9; /* Светлый фон */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тень для объёма */
+    border-radius: 10px; /* Закругленные углы */
+    overflow: hidden; /* Для сохранения закруглений */
+}
+
+/* Стили заголовков */
+table thead th {
+    background-color: #6A6A6A; /* Тёмно-серый фон */
+    color: white; /* Белый текст */
+    padding: 12px; /* Уменьшенные отступы */
+    text-transform: uppercase; /* Преобразование текста в верхний регистр */
+    font-size: 12px; /* Уменьшенный размер шрифта */
+    letter-spacing: 0.5px; /* Более сжатый интервал между буквами */
+    text-align: center; /* Выравнивание по центру */
+    white-space: nowrap; /* Убираем перенос строк */
+}
+
+/* Стили строк */
+table tbody tr {
+    border-bottom: 1px solid #ddd; /* Линия-разделитель между строками */
+    transition: background-color 0.3s ease; /* Анимация при наведении */
+}
+
+table tbody tr:hover {
+    background-color: #f1f1f1; /* Подсветка строки при наведении */
+}
+
+/* Стили ячеек */
+table tbody td {
+    padding: 15px; /* Отступы внутри ячеек */
+    text-align: center; /* Текст по центру */
+    font-size: 14px; /* Размер шрифта */
+    color: #333; /* Тёмно-серый цвет текста */
+    white-space: nowrap; /* Убираем перенос строк */
+    overflow: hidden; /* Убираем переполнение текста */
+    text-overflow: ellipsis; /* Добавляем троеточие для длинного текста */
+}
+
+/* Чередование строк */
+table tbody tr:nth-child(even) {
+    background-color: #f7f7f7; /* Светлый фон для чётных строк */
+}
+
+/* Дополнительные стили для кнопок внутри таблицы */
+table tbody td button {
+    padding: 8px 15px;
+    background-color: #6A6A6A; /* Тёмно-серый */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 10px; /* Уменьшение шрифта */
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+table tbody td button:hover {
+    background-color: #444; /* Тёмный фон при наведении */
+}
+
+table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.smaller-button {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    box-sizing: border-box;
+    gap: 15px;
+    position: relative;
+}
+
+.modal-content input, .modal-content textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.vertical-button-panel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px; /* Ширина панели */
+    background-color: #6A6A6A;
+    height: 100%; /* Высота панели */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    gap: 15px; /* Отступ между кнопками */
+}
+
+.vertical-button-panel .button {
+    width: 200px;
+    height: 50px; /* Единая высота кнопок */
+    margin: 0; /* Убираем внешние отступы */
+    text-align: center;
+    background-color: #444;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 0; /* Убираем внутренние отступы */
+    box-sizing: border-box;
+    font-size: 14px; /* Сокращаем размер шрифта для избегания переноса */
+    overflow: hidden; /* Убираем переполнение текста */
+    white-space: nowrap; /* Запрещаем перенос текста */
+}
+
+.vertical-button-panel .button:hover {
+    background-color: #222;
+}
+
+table tbody td button {
+    font-size: 14px; /* Уменьшаем шрифт до 10px */
+}
+
+/* Для кнопки "Снять с продажи" */
+table tbody td form button[type="submit"] {
+    font-size: 14px; /* Уменьшаем шрифт до 10px */
+}
+
+/* Для кнопки "Изменить информацию" */
+table tbody td form button[type="button"] {
+    font-size: 14px; /* Уменьшаем шрифт до 10px */
+}
+
+/* Кнопки внутри модального окна */
+#addUserModal .modal-content .button {
+    font-size: 14px; /* Уменьшаем шрифт внутри модального окна */
+}
+
+
+table, table th, table td {
+    text-transform: none;
+}
+
+table thead th {
+    text-transform: none !important;
+}
+
+/* Убираем преобразование текста в верхний регистр для кнопок */
+.button {
+    text-transform: none;
+}
